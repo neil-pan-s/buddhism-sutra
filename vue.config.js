@@ -5,7 +5,7 @@ var moment = require('moment');
 const resolve = dir => path.resolve(__dirname, dir);
 
 module.exports = {
-  publicPath: './',
+  publicPath: '/sutra/',
   outputDir: './dist',
   runtimeCompiler: true,
   filenameHashing: false,

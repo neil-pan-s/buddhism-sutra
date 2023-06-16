@@ -64,13 +64,13 @@ export default {
   },
   methods: {
     async loadSutra(name) {
-      let path = '/sutras/' + name + '/' + name
+      let path = location.pathname + '/sutras/' + name + '/' + name
       let isIndex = !name
 
       // 未指定经文 则显示序言
       if (isIndex) {
         name = '常颂经咒-序言'
-        path = '/sutras/' + name
+        path = location.pathname + '/sutras/' + name
       }
       
       await injectScript(path + '.js')
