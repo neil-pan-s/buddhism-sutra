@@ -2,16 +2,16 @@
   <div id="app">
 
     <nav class="nav">
-      <a v-if="!isFullScreen" href="/#/" :class="{ selected: isNavSelected('#/') }"> 首页 </a>
+      <a v-if="!isFullScreen" href="#/" :class="{ selected: isNavSelected('#/') }"> 首页 </a>
 
-      <a v-if="!isFullScreen" href="/#/阿弥陀佛心咒" :class="{ selected: isNavSelected('#/阿弥陀佛心咒') }"> 阿弥陀佛心咒 </a>
-      <a v-if="!isFullScreen" href="/#/大悲咒" :class="{ selected: isNavSelected('#/大悲咒') }"> 大悲咒 </a>
-      <a v-if="!isFullScreen" href="/#/楞严咒" :class="{ selected: isNavSelected('#/楞严咒') }"> 楞严咒 </a>
-      <a v-if="!isFullScreen" href="/#/六字大明咒" :class="{ selected: isNavSelected('#/六字大明咒') }"> 六字大明咒 </a>
-      <a v-if="!isFullScreen" href="/#/绿度母心咒" :class="{ selected: isNavSelected('#/绿度母心咒') }"> 绿度母心咒 </a>
-      <a v-if="!isFullScreen" href="/#/往生咒" :class="{ selected: isNavSelected('#/往生咒') }"> 往生咒 </a>
-      <a v-if="!isFullScreen" href="/#/药师佛心咒" :class="{ selected: isNavSelected('#/药师佛心咒') }"> 药师佛心咒 </a>
-      <a v-if="!isFullScreen" href="/#/准提咒" :class="{ selected: isNavSelected('#/准提咒') }"> 准提咒 </a>
+      <a v-if="!isFullScreen" href="#/阿弥陀佛心咒" :class="{ selected: isNavSelected('#/阿弥陀佛心咒') }"> 阿弥陀佛心咒 </a>
+      <a v-if="!isFullScreen" href="#/大悲咒" :class="{ selected: isNavSelected('#/大悲咒') }"> 大悲咒 </a>
+      <a v-if="!isFullScreen" href="#/楞严咒" :class="{ selected: isNavSelected('#/楞严咒') }"> 楞严咒 </a>
+      <a v-if="!isFullScreen" href="#/六字大明咒" :class="{ selected: isNavSelected('#/六字大明咒') }"> 六字大明咒 </a>
+      <a v-if="!isFullScreen" href="#/绿度母心咒" :class="{ selected: isNavSelected('#/绿度母心咒') }"> 绿度母心咒 </a>
+      <a v-if="!isFullScreen" href="#/往生咒" :class="{ selected: isNavSelected('#/往生咒') }"> 往生咒 </a>
+      <a v-if="!isFullScreen" href="#/药师佛心咒" :class="{ selected: isNavSelected('#/药师佛心咒') }"> 药师佛心咒 </a>
+      <a v-if="!isFullScreen" href="#/准提咒" :class="{ selected: isNavSelected('#/准提咒') }"> 准提咒 </a>
 
       <div class="more">
         <a v-if="!isFullScreen" href="https://www.douyin.com/user/MS4wLjABAAAAp2AMkZZPr5PB1Zng7Q-WB5nHJbZ7RcgOd0eJpnMB0bc" title="购买念珠" target="_blank">
@@ -25,7 +25,7 @@
 
     <router-view></router-view>
 
-    <div class="nav copyright"> <a href="http://neil-pan.com" target="_blank">© NEIL PAN 2023</a> </div>
+    <div class="nav copyright"> <a href="https://neil-pan.com" target="_blank">© NEIL PAN 2023</a> </div>
   </div>
 </template>
 
