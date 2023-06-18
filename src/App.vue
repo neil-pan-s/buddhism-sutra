@@ -2,16 +2,16 @@
   <div id="app">
 
     <nav class="nav">
-      <a v-if="!isFullScreen" href="#/" :class="{ selected: isNavSelected('#/') }"> 首页 </a>
+      <a v-if="!isFullScreen" href="#/" :class="{ selected: isNavSelected('#/') }"> 礼佛 </a>
 
-      <a v-if="!isFullScreen" href="#/阿弥陀佛心咒" :class="{ selected: isNavSelected('#/阿弥陀佛心咒') }"> 阿弥陀佛心咒 </a>
-      <a v-if="!isFullScreen" href="#/大悲咒" :class="{ selected: isNavSelected('#/大悲咒') }"> 大悲咒 </a>
-      <a v-if="!isFullScreen" href="#/楞严咒" :class="{ selected: isNavSelected('#/楞严咒') }"> 楞严咒 </a>
-      <a v-if="!isFullScreen" href="#/六字大明咒" :class="{ selected: isNavSelected('#/六字大明咒') }"> 六字大明咒 </a>
-      <a v-if="!isFullScreen" href="#/绿度母心咒" :class="{ selected: isNavSelected('#/绿度母心咒') }"> 绿度母心咒 </a>
-      <a v-if="!isFullScreen" href="#/往生咒" :class="{ selected: isNavSelected('#/往生咒') }"> 往生咒 </a>
-      <a v-if="!isFullScreen" href="#/药师佛心咒" :class="{ selected: isNavSelected('#/药师佛心咒') }"> 药师佛心咒 </a>
-      <a v-if="!isFullScreen" href="#/准提咒" :class="{ selected: isNavSelected('#/准提咒') }"> 准提咒 </a>
+      <a v-if="!isFullScreen" href="#/阿弥陀佛心咒" :class="{ selected: isNavSelected('#/阿弥陀佛心咒'), show: isShowMenu }"> 阿弥陀佛心咒 </a>
+      <a v-if="!isFullScreen" href="#/大悲咒" :class="{ selected: isNavSelected('#/大悲咒'), show: isShowMenu }"> 大悲咒 </a>
+      <a v-if="!isFullScreen" href="#/楞严咒" :class="{ selected: isNavSelected('#/楞严咒'), show: isShowMenu }"> 楞严咒 </a>
+      <a v-if="!isFullScreen" href="#/六字大明咒" :class="{ selected: isNavSelected('#/六字大明咒'), show: isShowMenu }"> 六字大明咒 </a>
+      <a v-if="!isFullScreen" href="#/绿度母心咒" :class="{ selected: isNavSelected('#/绿度母心咒'), show: isShowMenu }"> 绿度母心咒 </a>
+      <a v-if="!isFullScreen" href="#/往生咒" :class="{ selected: isNavSelected('#/往生咒'), show: isShowMenu }"> 往生咒 </a>
+      <a v-if="!isFullScreen" href="#/药师佛心咒" :class="{ selected: isNavSelected('#/药师佛心咒'), show: isShowMenu }"> 药师佛心咒 </a>
+      <a v-if="!isFullScreen" href="#/准提咒" :class="{ selected: isNavSelected('#/准提咒'), show: isShowMenu }"> 准提咒 </a>
 
       <div class="more">
         <a v-if="!isFullScreen" href="https://www.douyin.com/user/MS4wLjABAAAAp2AMkZZPr5PB1Zng7Q-WB5nHJbZ7RcgOd0eJpnMB0bc" title="购买念珠" target="_blank">
@@ -21,6 +21,8 @@
           <svg viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2941" width="30" height="30"><path d="M256 874.666667a21.333333 21.333333 0 0 1-21.333333 21.333333H96a53.393333 53.393333 0 0 1-53.333333-53.333333v-138.666667a21.333333 21.333333 0 0 1 42.666666 0v138.666667a10.666667 10.666667 0 0 0 10.666667 10.666666h138.666667a21.333333 21.333333 0 0 1 21.333333 21.333334zM42.666667 320V181.333333a53.393333 53.393333 0 0 1 53.333333-53.333333h138.666667a21.333333 21.333333 0 0 1 0 42.666667H96a10.666667 10.666667 0 0 0-10.666667 10.666666v138.666667a21.333333 21.333333 0 0 1-42.666666 0z m938.666666-138.666667v138.666667a21.333333 21.333333 0 0 1-42.666666 0V181.333333a10.666667 10.666667 0 0 0-10.666667-10.666666h-138.666667a21.333333 21.333333 0 0 1 0-42.666667h138.666667a53.393333 53.393333 0 0 1 53.333333 53.333333z m0 522.666667v138.666667a53.393333 53.393333 0 0 1-53.333333 53.333333h-138.666667a21.333333 21.333333 0 0 1 0-42.666667h138.666667a10.666667 10.666667 0 0 0 10.666667-10.666666v-138.666667a21.333333 21.333333 0 0 1 42.666666 0z" fill="#fff" p-id="2942"></path></svg>
         </a>
       </div>
+
+      <svg @click="isShowMenu = !isShowMenu" viewBox="0 0 16 16" version="1.1" height="24" width="24" class="menu"><path fill="burlywood" fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path></svg>
     </nav>
 
     <router-view></router-view>
@@ -38,7 +40,11 @@ export default {
   data() {
     return {
       isFullScreen: false,
+      isShowMenu: false,
     }
+  },
+  mounted() {
+    window.addEventListener('hashchange', () => this.isShowMenu = false)
   },
   methods: {
     isNavSelected(hash) {
@@ -55,6 +61,11 @@ export default {
 </script>
 
 <style>
+  @font-face {
+    font-family: 'GuYaSong';
+    src: url('/GuYaSong-NC.otf');
+  }
+
   * { padding: 0px; margin: 0px; }
 
   html,body {
@@ -64,7 +75,7 @@ export default {
   }
 
   #app {
-    font-family: "Microsoft Yahei", monospace;
+    font-family: 'GuYaSong', "Microsoft Yahei", monospace;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-weight: 400;
@@ -83,10 +94,10 @@ export default {
   }
 
   .nav {
-    font-size: 18px;
+    font-size: 20px;
     margin: 50px 0px;
     padding-left: 50px;
-    height: 40px;
+    min-height: 40px;
   }
 
   .nav a {
@@ -102,6 +113,13 @@ export default {
   .nav a:hover {
     opacity: 0.6;
     color: burlywood;
+  }
+
+  .nav .menu {
+    display: none;
+  }
+  .nav .show {
+    display: block !important;
   }
 
   .nav .selected {
@@ -146,5 +164,52 @@ export default {
     background-clip: padding-box;
     border: solid transparent;
     border-width: 0 0 0 6px;
+  }
+
+  @media screen and (max-width:1024px) {
+    .nav a, .copyright {
+      display: none;
+    }
+
+    .nav {
+      position: relative;
+    }
+    .nav .menu {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      display: inline-block;
+    }
+
+    .nav > a {
+      text-align: center;
+    }
+
+    .nav > a:first-child {
+      display: block;
+      
+      letter-spacing: 10px;
+      line-height: 50px;
+      font-weight: normal;
+      font-size: 25px;
+      opacity: 1.0 !important;
+      color: burlywood !important;
+    }
+
+    .nav {
+      padding: 0px;
+      margin: 0px 0px 50px;
+    }
+  }
+
+  @media screen and (max-height:420px) {
+    .nav , .copyright {
+      visibility: hidden;
+    }
+
+    .nav {
+      padding: 0px;
+      margin: 0px 0px 0px;
+    }
   }
 </style>
