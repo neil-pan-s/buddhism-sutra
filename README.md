@@ -1,5 +1,7 @@
 # 礼佛常颂经咒
 
+https://one-quant.com/sutra/
+
 ![](./screenshot/序言.png)
 ![](./screenshot/阿弥陀佛心咒.png)
 ![](./screenshot/大悲咒.png)
